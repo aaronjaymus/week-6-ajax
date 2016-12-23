@@ -27,6 +27,7 @@ var giphyAPI = {
 			var button = $("<button>");
 			button.html(this.teams[i])
 				.data("value", this.teams[i])
+				.addClass('btn')
 				.click(function(){
 					giphyAPI.printGif(this);
 				});
@@ -37,6 +38,7 @@ var giphyAPI = {
 		var team = $("#teamInput").val().trim();
 		this.teams.push(team);
 		this.printButtons();
+		$("#teamInput").val('');
 	},
 	printGif : function (button) {
 		//console.log(button);
