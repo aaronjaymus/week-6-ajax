@@ -65,7 +65,7 @@ var giphyAPI = {
         			.click(function(){
         				giphyAPI.animate(this);
         			});
-        		$("#gifPrints").append(teamGif, "<br>");
+        		$("#gifPrints").append(teamGif);
         		//console.log(results);
         	}
         });
