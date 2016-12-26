@@ -49,7 +49,7 @@ var giphyAPI = {
       	
       	$.ajax({
           url: queryURL,
-          method: "GET"
+          method: "POST"
         })
         .done(function(response) {
         	var results = response.data;
