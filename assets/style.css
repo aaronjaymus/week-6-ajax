@@ -1,7 +1,13 @@
+
 .gif {
 	border: 5px solid blue;
 	margin: 3px;
 }
 .btn {
 	margin: 3px;
+}
+
+.teamDiv {
+	height: 250px;
+	overflow: auto;
 }

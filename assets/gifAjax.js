@@ -56,16 +56,22 @@ var giphyAPI = {
         	console.log(results);
         	$("#gifPrints").empty();
         	for (var j=0; j<results.length; j++){
+        		var teamDiv = $("<div>");
+        		teamDiv.addClass("col-md-4 pull-left img-responsive teamDiv");
+        		var teamPar = $("<p>");
+        		teamPar.addClass("text-center")
+        			.text("Rating: " + results[j].rating);
         		var teamGif = $("<img>");
-        		teamGif.attr("src", results[j].images.fixed_height.url)
+        		teamGif.attr("src", results[j].images.fixed_height_still.url)
         			.data("still", results[j].images.fixed_height_still.url)
         			.data("animate", results[j].images.fixed_height.url)
-        			.data("state", "animate")
-        			.addClass("gif")
+        			.data("state", "still")
+        			.addClass("gif img-responsive")
         			.click(function(){
         				giphyAPI.animate(this);
         			});
-        		$("#gifPrints").append(teamGif);
+        		teamDiv.append(teamPar, teamGif);	
+        		$("#gifPrints").append(teamDiv);
         		//console.log(results);
         	}
         });
